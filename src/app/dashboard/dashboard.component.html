@@ -4,15 +4,15 @@
       Now begins your <strong>Hero adventure.</strong>
     </a>
   </div>
-  <div class="bubble bubble--highlight dash-container">
+  <div class="bubble bubble--highlight dash-yellow">
     Top Heroes
   </div>
-  <div class="row">
-    <div *ngFor="let hero of heroes" class="heroes-menu">
+  <div class="row heroes-container">
+    <div *ngFor="let hero of heroes" class="heroes-top">
       <div class="card col" style="width: 8rem;">
         <img src="../../assets/images/ultor.png" class="card-img-top" alt="super hero Ultor">
         <div class="card-body">
-          <h5 class="card-title">{{hero.name}}</h5>
+          <h2 class="card-title" style="font-family: Dekko, cursive;">{{hero.name}}</h2>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <button routerLink="/detail/{{hero.id}}" class="btn btn-primary">Learn More!</button>
         </div>

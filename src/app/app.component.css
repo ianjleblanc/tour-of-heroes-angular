@@ -6,8 +6,7 @@
 
 
 .main-container {
-  border: solid 3px red;
-  background-image: url("../assets/images/blue-comic-bg.jpg"), url("../assets/images/city-comic.jpg");
+  background-image: url("../assets/images/blue-comic-bg.jpg");
   background-position: left top, right bottom;
   background-repeat: no-repeat;
   background-size: cover;
