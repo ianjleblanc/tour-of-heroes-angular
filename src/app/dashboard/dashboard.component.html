@@ -1,8 +1,15 @@
-<h2>Top Heroes</h2>
-<div class="heroes-menu">
-  <a *ngFor="let hero of heroes"
-  routerLink="/detail/{{hero.id}}"
-  >
-    {{hero.name}}
+<div class="bubble">
+  <a href="https://angular.io/tutorial">
+    Now begins your <strong>Hero adventure.</strong>
   </a>
+</div>
+
+
+<div class="bubble bubble--highlight">
+  Top Heroes
+</div>
+<div class="heroes-menu">
+  <button *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+    {{hero.name}}
+  </button>
 </div>

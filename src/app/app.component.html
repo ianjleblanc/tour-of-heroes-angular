@@ -1,7 +1,22 @@
-<h1>{{title}}</h1>
-<nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/heroes">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<div class="main-container">
+
+  <div class="nav-top row">
+    <div class="logo col">
+      <a href="https://angular.io/tutorial">
+        <img src="../assets/images/title.png">
+      </a>
+    </div>
+    <div class="action col">
+      <nav>
+        <button routerLink="/dashboard" class="button-54">Dashboard</button>
+        <button routerLink="/heroes" class="button-54" role="button">Heroes</button>
+      </nav>
+    </div>
+
+  </div>
+
+
+  <router-outlet></router-outlet>
+  <app-messages></app-messages>
+
+</div>

@@ -1,6 +1,6 @@
-h2 {
+/* h2 {
   text-align: center;
-}
+} */
 
 .heroes-menu {
   padding: 0;
@@ -17,7 +17,11 @@ h2 {
 }
 
 a {
-  background-color: #3f525c;
+  text-decoration: none;
+  color: #000;
+  font-family: "Dekko", cursive;
+
+  /* background-color: #3f525c;
   border-radius: 2px;
   padding: 1rem;
   font-size: 1.2rem;
@@ -28,21 +32,89 @@ a {
   width: 100%;
   min-width: 70px;
   margin: .5rem auto;
-  box-sizing: border-box;
+  box-sizing: border-box; */
 
   /* flexbox */
-  order: 0;
+
+  /* order: 0;
   flex: 0 1 auto;
-  align-self: auto;
+  align-self: auto; */
+
+  /* max-width: 600px;
+  margin: 2rem 0;
+  padding: 0.2rem 1.25rem;
+  text-align: center;
+  font-family: "Dekko", cursive;
+  text-transform: uppercase;
+  font-size: rem;
+  letter-spacing: 0.2rem;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #fff;
+  background-size: 12px, 100%;
+  border: 0.4rem solid #000; */
+
+  /* position relative for the :before pseudo element */
+  /* position: relative; */
 }
 
 @media (min-width: 600px) {
-  a {
+  /* a {
     width: 18%;
     box-sizing: content-box;
-  }
+  } */
 }
 
-a:hover {
-  background-color: #000;
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Dekko|Lato:900|Rock+Salt");
+
+
+
+.bubble {
+  max-width: 600px;
+  margin: 2rem 0;
+  padding: 0.2rem 1.25rem;
+  text-align: center;
+  font-family: "Dekko", cursive;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #fff;
+  background-size: 12px, 100%;
+  border: 0.4rem solid #000;
+  /* position relative for the :before pseudo element */
+  position: relative;
+}
+
+strong {
+  font-family: "Dekko", cursive;
+}
+
+.bubble--highlight {
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.8" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23d68810"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #ffcd28;
+  background-size: 13px, 100%;
+  font-weight: 700;
+}
+/* for the highlight container always add an exclamation point */
+.bubble--highlight:after {
+  content: "!";
+}
+/* for every .bubble container add a solid background behind the container itself, slightly offset */
+.bubble:before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 0.15rem;
+  width: 100%;
+  height: 100%;
+  /* with the same texture, but different color, for both the texture and the background */
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(35)" opacity="1" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #000;
+  background-size: 12px, 100%;
+  border: 0.4rem solid #000;
+  z-index: -5;
 }

@@ -1,22 +1,70 @@
-/* AppComponent's private CSS styles */
-h1 {
-    margin-bottom: 0;
+
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+
+.main-container {
+  border: solid 3px red;
+  background-image: url("../assets/images/blue-comic-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+  /* margin: 0;
+  padding: 0; */
+}
+
+.nav-top {
+  border: solid  3px purple;
+}
+
+.logo {
+  border:solid 2px rgb(71, 223, 50);
+}
+
+img {
+  width: calc(100% - 30px);
+  height: auto;
+  min-width: 500px;
+}
+
+
+
+.action {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 1em;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
   }
-  nav a {
-    padding: 1rem;
-    text-decoration: none;
-    margin-top: 10px;
-    margin-right: 5px;
-    display: inline-block;
-    background-color: #e8e8e8;
-    color: #3d3d3d;
-    border-radius: 4px;
-  }
-  
-  nav a:hover {
-    color: white;
-    background-color: #42545C;
-  }
-  nav a.active {
-    background-color: black;
-  }
+}
