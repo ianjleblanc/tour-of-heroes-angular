@@ -1,15 +1,22 @@
-<div class="bubble">
-  <a href="https://angular.io/tutorial">
-    Now begins your <strong>Hero adventure.</strong>
-  </a>
-</div>
-
-
-<div class="bubble bubble--highlight">
-  Top Heroes
-</div>
-<div class="heroes-menu">
-  <button *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
-    {{hero.name}}
-  </button>
+<div class="">
+  <div class="bubble dash-container">
+    <a href="https://angular.io/tutorial">
+      Now begins your <strong>Hero adventure.</strong>
+    </a>
+  </div>
+  <div class="bubble bubble--highlight dash-container">
+    Top Heroes
+  </div>
+  <div class="row">
+    <div *ngFor="let hero of heroes" class="heroes-menu">
+      <div class="card col" style="width: 8rem;">
+        <img src="../../assets/images/ultor.png" class="card-img-top" alt="super hero Ultor">
+        <div class="card-body">
+          <h5 class="card-title">{{hero.name}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button routerLink="/detail/{{hero.id}}" class="btn btn-primary">Learn More!</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
