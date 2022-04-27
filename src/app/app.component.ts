@@ -7,20 +7,33 @@ import Swal from 'sweetalert2';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  showNewsLetter: boolean = true;
   // title = 'Tour of Heroes';
 
 
-
   ngOnInit(): void {
-    // Swal.fire({
-    //   title: 'Become a Hero!',
-    //   text: 'Subscribe to our weekly newsletter.',
-    //   // imageUrl: 'https://unsplash.it/400/200',
-    //   imageUrl: 'https://www.influencive.com/wp-content/uploads/2017/07/superhero.jpg',
-    //   imageWidth: 500,
-    //   imageHeight: 300,
-    //   imageAlt: 'Ultor on mount olympus',
-    //   confirmButtonText: 'Sign Up',
-    // })
+    let json = sessionStorage.getItem('showNewsLetter');
+    if (json){
+      this.showNewsLetter = JSON.parse(json);
+    }
+    if (this.showNewsLetter){
+      setTimeout(async ()=>{
+        const {value: confirm} = await Swal.fire({
+          title: 'Become a Hero!',
+          text: 'Subscribe to our weekly newsletter.',
+          imageUrl: 'https://www.influencive.com/wp-content/uploads/2017/07/superhero.jpg',
+          imageWidth: 500,
+          imageHeight: 300,
+          imageAlt: 'Super Hero on mount olympus',
+          confirmButtonText: 'Sign Up',
+        })
+
+        if (confirm){
+          this.showNewsLetter = false;
+          sessionStorage.setItem('showNewsLetter', JSON.stringify(false));
+        }
+      }, 4000)
+    }
   }
 }

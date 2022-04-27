@@ -1,15 +1,41 @@
-/* HeroesComponent's private CSS styles */
-.heroes {
+@import url("https://fonts.googleapis.com/css?family=Dekko|Lato:900|Rock+Salt");
+
+
+
+.bubble--highlight {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 0.2rem 1.25rem;
+  text-align: center;
+  font-family: "Dekko", cursive;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.8" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23d68810"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #ffcd28;
+  background-size: 13px, 100%;
+  font-weight: 700;
+  border: 0.4rem solid #000;
+  /* position relative for the :before pseudo element */
+  position: relative;
+}
+
+
+
+
+/* .heroes {
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
     width: 15em;
   }
-  
+
   .heroes li {
     display: flex;
   }
-  
+
   .heroes button {
     flex: 1;
     cursor: pointer;
@@ -24,33 +50,33 @@
     align-items: stretch;
     height: 1.8em;
   }
-  
+
   .heroes button:hover {
     color: #2c3a41;
     background-color: #e6e6e6;
     left: .1em;
   }
-  
+
   .heroes button:active {
     background-color: #525252;
     color: #fafafa;
   }
-  
+
   .heroes button.selected {
     background-color: black;
     color: white;
   }
-  
+
   .heroes button.selected:hover {
     background-color: #505050;
     color: white;
   }
-  
+
   .heroes button.selected:active {
     background-color: black;
     color: white;
   }
-  
+
   .heroes .badge {
     display: inline-block;
     font-size: small;
@@ -61,7 +87,7 @@
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-  
+
   .heroes .name {
     align-self: center;
-  }
+  } */

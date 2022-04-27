@@ -1,20 +1,39 @@
-<h2>My Heroes</h2>
-
-<div>
-    <label for="new-hero">Hero name: </label>
-    <input id="new-hero" #heroName />
-
-    <!-- (click) passes input value to add() and then clears the input -->
-    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+<div class="main-container">
+  <div class="bubble bubble--highlight dash-yellow">
+    Behold, my collection of Heroes !
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <label for="new-hero">Hero name: </label>
+      <input id="new-hero" #heroName />
+      <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
         Add hero
-    </button>
+      </button>
+    </div>
+    <div class="col-8">
+      <!-- <ul class="heroes">
+        <li *ngFor="let hero of heroes">
+          <a routerLink="/detail/{{hero.id}}">
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
+          </a>
+          <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
+        </li>
+      </ul> -->
+      <div class="row heroes-container">
+        <div *ngFor="let hero of heroes" class="heroes-top">
+          <div class="card col" style="width: 8rem;">
+            <div class="img-container" style="height:464px;width:300px;background:url('../../assets/images/ultor.png');"></div>
+            <!-- <img src="../../assets/images/ultor.png" class="card-img-top" alt="super hero Ultor"> -->
+            <div class="card-body">
+              <h2 class="card-title" style='font-family: Dekko, cursive;'>{{hero.name}}</h2>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button routerLink="/heroes/detail/{{hero.id}}" class="btn btn-primary">Learn More!</button>
+              <button class="btn btn-danger delete" title="delete hero" (click)="delete(hero)">x</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<ul class="heroes">
-    <li *ngFor="let hero of heroes">
-        <a routerLink="/detail/{{hero.id}}">
-            <span class="badge">{{hero.id}}</span> {{hero.name}}
-        </a>
-        <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
-    </li>
-</ul>

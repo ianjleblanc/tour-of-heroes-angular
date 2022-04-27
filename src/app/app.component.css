@@ -1,9 +1,4 @@
 
-/* * {
-  margin: 0;
-  padding: 0;
-} */
-
 
 .main-container {
   background-image: url("../assets/images/blue-comic-bg.jpg");
@@ -18,6 +13,7 @@
 
 .nav-top {
   border: solid  3px purple;
+  width: 100%;
 }
 
 .logo {
@@ -37,6 +33,7 @@ img {
   justify-content: right;
   align-items: center;
   flex-wrap: nowrap;
+  width: 100%;
 }
 
 
