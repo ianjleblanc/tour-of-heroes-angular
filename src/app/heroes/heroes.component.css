@@ -22,7 +22,32 @@
   position: relative;
 }
 
+.heroes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
+.heroes-list {
+  padding: 0;
+  margin: 1em;
+  max-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card-img-top {
+  /* background-color: crimson; */
+  max-height: 325px;
+
+}
+
+#bar-example-13 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
 
 
 /* .heroes {

@@ -9,12 +9,12 @@
   </div>
   <div class="row heroes-container">
     <div *ngFor="let hero of heroes" class="heroes-top">
-      <div class="card col" style="width: 8rem;">
-        <img src="../../assets/images/ultor.png" class="card-img-top" alt="super hero Ultor">
+      <div class="card col" style="width: 9rem;">
+        <img src="../../assets/images/{{hero.img}}" class="card-img-top" alt="Super Hero stat card">
         <div class="card-body">
           <h2 class="card-title" style="font-family: Dekko, cursive;">{{hero.name}}</h2>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <button routerLink="/heroes/detail/{{hero.id}}" class="btn btn-primary">Learn More!</button>
+          <button routerLink="/heroes/detail/{{hero.id}}" class="button-54">Learn More!</button>
         </div>
       </div>
     </div>

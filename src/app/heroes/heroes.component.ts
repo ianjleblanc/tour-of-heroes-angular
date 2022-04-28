@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
@@ -10,6 +11,7 @@ import { HeroService } from '../hero.service';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[] = [];
+  imgPath = '../../assets/images/'
 
   constructor(private heroService: HeroService) { }
 
@@ -18,7 +20,9 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes()
+    this.heroService.getHeroes().pipe(
+      tap(data => console.log('data: ', data))
+    )
       .subscribe(heroes => this.heroes = heroes);
   }
 
@@ -35,6 +39,10 @@ export class HeroesComponent implements OnInit {
     // add swal.fire for delete confirmation
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero.id).subscribe();
+  }
+
+  imgTest(img: string){
+    console.log('img name: ', img);
   }
 
 }

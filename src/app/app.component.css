@@ -6,19 +6,19 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  /* object-fit: contain; */
   /* width: 100vw; */
   /* margin: 0;
   padding: 0; */
 }
 
 .nav-top {
-  border: solid  3px purple;
   width: 100%;
+  /* background-color: whitesmoke; */
 }
 
-.logo {
-  border:solid 2px rgb(71, 223, 50);
-}
+/* .logo {
+} */
 
 img {
   width: calc(100% - 30px);

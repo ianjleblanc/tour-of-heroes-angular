@@ -1,4 +1,3 @@
-// make it IHero??
 export interface Hero {
     id: number;
     name: string;
@@ -10,11 +9,4 @@ export interface Hero {
   }
 
 
-  // export class Hero?? implements or extends Hero? {
 
-  //
-
-
-
-
-  // }

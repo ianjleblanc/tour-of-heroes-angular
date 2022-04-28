@@ -1,17 +1,17 @@
-<div class="main-container">
+<div class="container-fluid">
   <div class="bubble bubble--highlight dash-yellow">
     Behold, my collection of Heroes !
   </div>
-  <div class="row">
-    <div class="col-4">
+  <!-- <div class="row"> -->
+  <!-- <div class="col-4">
       <label for="new-hero">Hero name: </label>
       <input id="new-hero" #heroName />
       <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
         Add hero
       </button>
-    </div>
-    <div class="col-8">
-      <!-- <ul class="heroes">
+    </div> -->
+  <!-- <div class=""> -->
+  <!-- <ul class="heroes">
         <li *ngFor="let hero of heroes">
           <a routerLink="/detail/{{hero.id}}">
             <span class="badge">{{hero.id}}</span> {{hero.name}}
@@ -19,21 +19,53 @@
           <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
         </li>
       </ul> -->
-      <div class="row heroes-container">
-        <div *ngFor="let hero of heroes" class="heroes-top">
-          <div class="card col" style="width: 8rem;">
-            <div class="img-container" style="height:464px;width:300px;background:url('../../assets/images/ultor.png');"></div>
-            <!-- <img src="../../assets/images/ultor.png" class="card-img-top" alt="super hero Ultor"> -->
-            <div class="card-body">
-              <h2 class="card-title" style='font-family: Dekko, cursive;'>{{hero.name}}</h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button routerLink="/heroes/detail/{{hero.id}}" class="btn btn-primary">Learn More!</button>
-              <button class="btn btn-danger delete" title="delete hero" (click)="delete(hero)">x</button>
-            </div>
-          </div>
+  <div class="row heroes-container">
+    <div *ngFor="let hero of heroes" class="heroes-list">
+      <div class="card col" style="width: 8rem;">
+        <div class="img-container"></div>
+        <img src="{{imgPath+hero.img}}" class="card-img-top" alt="super hero Ultor">
+        <div class="card-body">
+          <h2 class="card-title" style='font-family: Dekko, cursive;'>{{hero.name}}</h2>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <table id="bar-example-13" class="charts-css bar show-labels show-primary-axis show-10-secondary-axes">
+            <caption> Bar Example #13 </caption>
+            <thead>
+              <tr>
+                <th scope="col"> Year </th>
+                <th scope="col"> Progress </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"> Intellect </th>
+                <!-- Make --size:0.2 = 20 etc. ?? -->
+                <td style="--size:0.2;"></td>
+              </tr>
+              <tr>
+                <th scope="row"> Strength </th>
+                <td style="--size:0.8;"></td>
+              </tr>
+              <tr>
+                <th scope="row"> Speed </th>
+                <td style="--size:0.4;"></td>
+              </tr>
+              <tr>
+                <th scope="row"> Combat </th>
+                <td style="--size:0.6;"></td>
+              </tr>
+              <tr>
+                <th scope="row"> Durable </th>
+                <td style="--size:0.2;"></td>
+              </tr>
+            </tbody>
+          </table>
+          <button routerLink="/heroes/detail/{{hero.id}}" class="btn btn-primary">Learn More!</button>
+          <button class="btn btn-danger delete" title="delete hero" (click)="delete(hero)">x</button>
         </div>
       </div>
     </div>
   </div>
+  <!-- </div> -->
+  <!-- </div> -->
 </div>
-
