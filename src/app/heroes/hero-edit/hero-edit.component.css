@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Dekko|Lato:900|Rock+Salt");
+
+
+h1 {
+  font-family: "Dekko", cursive;
+  font-size: 30pt;
+}
+
+.hero-card {
+  width: 25em;
+  height: 60rem;
+  /* display: flex;
+  justify-content: center; */
+  margin: auto;
+  margin-top: 3%;
+  /* padding-bottom: 20px; */
+
+}
+
+
+
+.card {
+  border: solid .5em goldenrod;
+  outline:  solid .2em black;
+
+}
+
+mat-select {
+  margin-left: 2%;
+  /* margin-right: 2%; */
+  /* width: 23em; */
+  height: 2em;
+}
+
+mat-form-field {
+  width: 22em
+}
+
+/* select {
+  margin-right: 3%;
+  width: 23em;
+  margin-left: 2%;
+} */
+
+/* .card-header {
+  margin: 5px 10px;
+} */

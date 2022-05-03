@@ -1,0 +1,144 @@
+<div class="card hero-card">
+
+  <div class="card-header">
+    <h1>Edit Your Hero.</h1>
+  </div>
+  <div class="card-body form">
+    <!-- <p>hero-edit works!</p> -->
+
+    <form (ngSubmit)="onSave()"
+          [formGroup]="heroForm" *ngIf="hero$ | async as hero; else loadingSpinner">
+
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Species</mat-label>
+            <input matInput formControlName="species"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>World</mat-label>
+            <input matInput formControlName="world"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Hero Image</mat-label>
+            <input matInput formControlName="img"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Intelligence</mat-label>
+            <input matInput formControlName="intelligence"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Strength</mat-label>
+            <input matInput formControlName="strength"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Speed</mat-label>
+            <input matInput formControlName="speed"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Combat</mat-label>
+            <input matInput formControlName="combat"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Durability</mat-label>
+            <input matInput formControlName="durability"/>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Select Gender</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option value="null">Choose Gender</mat-option>
+              <mat-option value="Male">Male</mat-option>
+              <mat-option value="Female">Female</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- <mat-form-field>
+            <mat-checkbox formControlName="flight">Flight</mat-checkbox>
+          </mat-form-field> -->
+          <section>
+            <mat-checkbox formControlName="flight">Flight</mat-checkbox>
+          </section>
+
+          <!-- <mat-form-field>
+            <mat-label>Flight</mat-label>
+            <mat-select formControlName="flight">
+              <mat-option value="null">Choose One</mat-option>
+              <mat-option value="true">True</mat-option>
+              <mat-option value="false">False</mat-option>
+            </mat-select>
+          </mat-form-field> -->
+          <!-- <div class="form-group row mb-2">
+            <label for="genderId" class="col-form-label">Gender</label>
+            <select formControlName="gender" name="gender" id="gender">
+              <option value="null">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select> -->
+            <!-- <div class="col"> -->
+              <!-- <input class="form-control"
+                     id="genderId"
+                     formControlName="gender"> -->
+            <!-- </div> -->
+          <!-- </div> -->
+          <!-- <div class="form-group row mb-2">
+            <label for="speciesId" class="col-form-label">Species</label>
+            <div class="col">
+              <input class="form-control"
+                     type="text"
+                     id="speciesId"
+                     placeholder="Species"
+                     formControlName="species">
+            </div>
+          </div>
+          <div class="form-group row mb-2">
+            <label for="worldId" class="col-form-label">World</label>
+            <div class="col">
+              <input class="form-control"
+                     type="text"
+                     id="worldId"
+                     placeholder="World"
+                     formControlName="world">
+            </div>
+          </div> -->
+
+          <!-- <div class="form-group row mb-2">
+            <label for="id" class="col-form-label">Flight</label>
+            <div class="col">
+              <input class="form-control"
+                     type="text"
+                     id="id"
+                     placeholder="Hero Name"
+                     formControlName="name">
+            </div>
+          </div>
+          <div class="form-group row mb-2">
+            <label for="id" class="col-form-label">Hero Image</label>
+            <div class="col">
+              <input class="form-control"
+                     type="text"
+                     id="id"
+                     placeholder="Hero Name"
+                     formControlName="name">
+            </div>
+          </div> -->
+
+    </form>
+
+    <ng-template #loadingSpinner>
+      <mat-spinner></mat-spinner>
+    </ng-template>
+  </div>
+
+
+</div>

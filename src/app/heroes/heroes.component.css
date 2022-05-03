@@ -2,7 +2,7 @@
 
 
 
-.bubble--highlight {
+.bubble {
   display: flex;
   justify-content: center;
   max-width: 600px;
@@ -13,13 +13,14 @@
   text-transform: uppercase;
   font-size: 3rem;
   letter-spacing: 0.2rem;
-  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.8" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23d68810"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
-    #ffcd28;
-  background-size: 13px, 100%;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #fff;
+  background-size: 12px, 100%;
   font-weight: 700;
   border: 0.4rem solid #000;
   /* position relative for the :before pseudo element */
   position: relative;
+  line-height: 40px;
 }
 
 .heroes-container {
@@ -28,13 +29,34 @@
   justify-content: center;
 }
 
-.heroes-list {
+.heroes-card {
   padding: 0;
   margin: 1em;
   max-width: 300px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+.card {
+  border: solid .5em goldenrod;
+  outline:  solid .2em black;
+
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.card-title {
+  font-weight: bolder;
+  font-size: 25pt;
+  padding-left: .5em;
+}
+
+.card-text {
+  padding-left: .5em;
 }
 
 .card-img-top {
@@ -49,70 +71,59 @@
   margin: 0 auto;
 }
 
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 1em;
 
-/* .heroes {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 15em;
-  }
+}
 
-  .heroes li {
-    display: flex;
-  }
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
 
-  .heroes button {
-    flex: 1;
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: 0;
-    height: 1.6em;
-    border-radius: 4px;
-    display: flex;
-    align-items: stretch;
-    height: 1.8em;
-  }
+.green {
+  color: green;
+}
 
-  .heroes button:hover {
-    color: #2c3a41;
-    background-color: #e6e6e6;
-    left: .1em;
-  }
+.red {
+  color: red;
+}
 
-  .heroes button:active {
-    background-color: #525252;
-    color: #fafafa;
-  }
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
 
-  .heroes button.selected {
-    background-color: black;
-    color: white;
-  }
+.btn {
+  width: 8em;
+  font-size: 9pt;
+}
 
-  .heroes button.selected:hover {
-    background-color: #505050;
-    color: white;
-  }
+th {
+  align-items: flex-start !important;
+  padding-left: 8px !important;
+}
 
-  .heroes button.selected:active {
-    background-color: black;
-    color: white;
-  }
+/* .edit {
+  background-color: rgb(60, 179, 113);
+} */
 
-  .heroes .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em !important;
-    background-color: #405061;
-    line-height: 1em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-  }
-
-  .heroes .name {
-    align-self: center;
-  } */
+.delete {
+  background-color: rgba(255, 0, 0, 0.6);
+}

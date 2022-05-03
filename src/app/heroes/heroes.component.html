@@ -1,67 +1,70 @@
 <div class="container-fluid">
-  <div class="bubble bubble--highlight dash-yellow">
-    Behold, my collection of Heroes !
+  <div class="bubble dash-yellow">
+    Behold, my hoard of Heroes !
   </div>
-  <!-- <div class="row"> -->
-  <!-- <div class="col-4">
-      <label for="new-hero">Hero name: </label>
-      <input id="new-hero" #heroName />
-      <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
-        Add hero
-      </button>
-    </div> -->
-  <!-- <div class=""> -->
-  <!-- <ul class="heroes">
-        <li *ngFor="let hero of heroes">
-          <a routerLink="/detail/{{hero.id}}">
-            <span class="badge">{{hero.id}}</span> {{hero.name}}
-          </a>
-          <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
-        </li>
-      </ul> -->
   <div class="row heroes-container">
-    <div *ngFor="let hero of heroes" class="heroes-list">
+    <div *ngFor="let hero of heroes" class="heroes-card">
       <div class="card col" style="width: 8rem;">
         <div class="img-container"></div>
-        <img src="{{imgPath+hero.img}}" class="card-img-top" alt="super hero Ultor">
-        <div class="card-body">
-          <h2 class="card-title" style='font-family: Dekko, cursive;'>{{hero.name}}</h2>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+        <img routerLink="/heroes/detail/{{hero.id}}" src="{{imgPath+hero.img}}" class="card-img-top" alt="super hero Ultor">
+        <div class="card-body body-container">
+          <div class="card-title" style='font-family: Dekko, cursive;'>{{hero.name}}</div>
+          <div class="card-text">
+            <div><strong>Gender: </strong> {{hero.gender}}</div>
+            <div><strong>Species:</strong> {{hero.species}}</div>
+            <div><strong>World:</strong> {{hero.world}}</div>
+            <!-- ngClass => add class that has check icon for true and x icon for false -->
+            <!-- hero.flight === true ? "fa-solid fa-circle-check" : "fa-solid fa-(close or x)" -->
+            <div><strong>Flight: </strong> <i class="fa-solid"
+                [ngClass]="{'fa-circle-check green': hero.flight, 'fa-circle-xmark red': !hero.flight}"></i></div>
+
+          </div>
           <table id="bar-example-13" class="charts-css bar show-labels show-primary-axis show-10-secondary-axes">
-            <caption> Bar Example #13 </caption>
+            <!-- <caption> Bar Example #13 </caption>
             <thead>
               <tr>
                 <th scope="col"> Year </th>
                 <th scope="col"> Progress </th>
               </tr>
-            </thead>
+            </thead> -->
             <tbody>
               <tr>
-                <th scope="row"> Intellect </th>
+                <th class="header-label" scope="row"> Intellect </th>
                 <!-- Make --size:0.2 = 20 etc. ?? -->
-                <td style="--size:0.2;"></td>
+                <td  style="--size:{{getSize(hero.intelligence)}};">
+                  <span class="tooltip">{{hero.intelligence}}</span>
+                </td>
               </tr>
               <tr>
-                <th scope="row"> Strength </th>
-                <td style="--size:0.8;"></td>
+                <th class="header-label" scope="row"> Strength </th>
+                <td style="--size:{{getSize(hero.strength)}};">
+                  <span class="tooltip">{{hero.strength}}</span>
+                </td>
               </tr>
               <tr>
-                <th scope="row"> Speed </th>
-                <td style="--size:0.4;"></td>
+                <th class="header-label" scope="row"> Speed </th>
+                <td style="--size:{{getSize(hero.speed)}};">
+                  <span class="tooltip">{{hero.speed}}</span>
+                </td>
               </tr>
               <tr>
-                <th scope="row"> Combat </th>
-                <td style="--size:0.6;"></td>
+                <th class="header-label" scope="row"> Combat </th>
+                <td style="--size:{{getSize(hero.combat)}};">
+                  <span class="tooltip">{{hero.combat}}</span>
+                </td>
               </tr>
               <tr>
-                <th scope="row"> Durable </th>
-                <td style="--size:0.2;"></td>
+                <th class="header-label" scope="row"> Durable </th>
+                <td style="--size:{{getSize(hero.durability)}};">
+                  <span class="tooltip">{{hero.durability}}</span>
+                </td>
               </tr>
             </tbody>
           </table>
-          <button routerLink="/heroes/detail/{{hero.id}}" class="btn btn-primary">Learn More!</button>
-          <button class="btn btn-danger delete" title="delete hero" (click)="delete(hero)">x</button>
+          <div class="btn-container">
+            <button (click)="edit(hero.id)" class="button-54 btn edit">Edit</button>
+            <button class="button-54 btn delete" title="delete hero" (click)="onDelete(hero)">Delete</button>
+          </div>
         </div>
       </div>
     </div>

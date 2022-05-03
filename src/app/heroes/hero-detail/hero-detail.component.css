@@ -1,5 +1,26 @@
 /* HeroDetailComponent's private CSS styles */
-label {
+.bubble {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 0.2rem 1.25rem;
+  text-align: center;
+  font-family: "Dekko", cursive;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #fff;
+  background-size: 12px, 100%;
+  font-weight: 700;
+  border: 0.4rem solid #000;
+  /* position relative for the :before pseudo element */
+  position: relative;
+  line-height: 40px;
+}
+
+/* label {
     color: #435960;
     font-weight: bold;
   }
@@ -21,6 +42,74 @@ label {
     background-color: #eee;
     color: #ccc;
     cursor: auto;
+  } */
+
+  .heroes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .heroes-card {
+    padding: 0;
+    margin: 1em;
+    max-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .card {
+    border: solid .5em goldenrod;
+    outline:  solid .2em black;
+
+  }
+
+  .card-title {
+    font-size: 20pt;
+    font-weight: bold;
+  }
+
+  .green {
+    color: green;
+  }
+
+  .red {
+    color: red;
   }
 
 
+  .button-54 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 1em;
+
+  }
+
+  .button-54:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .btn {
+    width: 8em;
+    font-size: 9pt;
+  }

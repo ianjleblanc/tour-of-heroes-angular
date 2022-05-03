@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { isSuccess } from 'angular-in-memory-web-api';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -26,14 +27,20 @@ export class AppComponent implements OnInit {
           imageWidth: 500,
           imageHeight: 300,
           imageAlt: 'Super Hero on mount olympus',
-          confirmButtonText: 'Sign Up',
+          confirmButtonText: 'Sign Up!',
+          confirmButtonColor: 'LightSeaGreen',
+          showCancelButton: true,
+          cancelButtonText: "I'm Not a Hero..",
+          cancelButtonColor: 'Crimson'
+
+
         })
 
         if (confirm){
           this.showNewsLetter = false;
           sessionStorage.setItem('showNewsLetter', JSON.stringify(false));
         }
-      }, 4000)
+      }, 5000)
     }
   }
 }

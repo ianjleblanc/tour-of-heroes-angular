@@ -20,6 +20,7 @@
   border: 0.4rem solid #000;
   /* position relative for the :before pseudo element */
   position: relative;
+  line-height: 40px;
 }
 
 strong {
@@ -79,11 +80,14 @@ strong {
 }
 
 .card-img-top {
-  background-color: crimson;
+  /* background-color: crimson; */
+  max-height: 325px;
 }
 
 .card-title {
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: 25pt;
+  padding-left: .5em;
 }
 
 a {
@@ -107,7 +111,7 @@ a {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin: 1em;
+  margin: auto;
 
 }
 
@@ -117,5 +121,17 @@ a {
   left: 5px;
 }
 
+.card {
+  border: solid .5em goldenrod;
+  outline:  solid .2em black;
+
+}
+
+/* .learn-btn { */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* margin: auto;
+} */
 
 
