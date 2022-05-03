@@ -55,6 +55,8 @@ export class HeroDetailComponent implements OnInit {
     }
   }
 
+  // TESTING
+
   async onDelete(hero: Hero) {
     // add swal.fire for delete confirmationt
 
