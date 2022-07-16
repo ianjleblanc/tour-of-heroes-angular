@@ -7,18 +7,15 @@ import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component'
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'heroes', loadChildren: ()=>
-    import('./heroes/heroes.module').then(
-      (m) => m.HeroesModule
-      )
-  }
+  {
+    path: 'heroes',
+    loadChildren: () =>
+      import('./heroes/heroes.module').then((m) => m.HeroesModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-
-
-
-export class AppRoutingModule { }
+export class AppRoutingModule {}

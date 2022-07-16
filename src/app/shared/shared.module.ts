@@ -5,21 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-
 @NgModule({
   declarations: [],
-  imports: [
-    MaterialsModule,
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
-  exports: [
-    MaterialsModule,
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ]
+  imports: [MaterialsModule, CommonModule, FormsModule, ReactiveFormsModule],
+  exports: [MaterialsModule, CommonModule, FormsModule, ReactiveFormsModule],
 })
-export class SharedModule { }
+export class SharedModule {}

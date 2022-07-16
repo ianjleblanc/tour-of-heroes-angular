@@ -1,84 +1,42 @@
 <div *ngIf="hero">
-
-
-  <div class="bubble">
-    {{hero.name}} Details
-  </div>
-
-
-
+  <div class="bubble">{{ hero.name }} Details</div>
   <div class="row heroes-container">
     <div class="heroes-card">
-      <div class="card col" style="width: 8rem;">
+      <div class="card col" style="width: 8rem">
         <div class="img-container"></div>
-        <img routerLink="/heroes/detail/{{hero.id}}" src="{{imgPath+hero.img}}" class="card-img-top"
-          alt="super hero Ultor">
+        <img
+          routerLink="/heroes/detail/{{ hero.id }}"
+          src="{{ imgPath + hero.img }}"
+          class="card-img-top"
+          alt="super hero Ultor"
+        />
         <div class="card-body body-container">
-          <div class="card-title" style='font-family: Dekko, cursive;'>{{hero.name}}</div>
+          <div class="card-title" style="font-family: Dekko, cursive">
+            {{ hero.name }}
+          </div>
           <div class="card-text">
-            <div><strong>Gender: </strong> {{hero.gender}}</div>
-            <div><strong>Species:</strong> {{hero.species}}</div>
-            <div><strong>World:</strong> {{hero.world}}</div>
-
-            <!-- <div><strong>Flight: </strong> <i class="fa-solid"
-                [ngClass]="{'fa-circle-check green': hero.flight, 'fa-circle-xmark red': !hero.flight}"></i></div>
-
-          </div> -->
-          <!-- <table id="bar-example-13" class="charts-css bar show-labels show-primary-axis show-10-secondary-axes"> -->
-            <!-- <tbody>
-              <tr>
-                <th class="header-label" scope="row"> Intellect </th>
-                <td style="--size:{{getSize(hero.intelligence)}};">
-                  <span class="tooltip">{{hero.intelligence}}</span>
-                </td>
-              </tr>
-              <tr>
-                <th class="header-label" scope="row"> Strength </th>
-                <td style="--size:{{getSize(hero.strength)}};">
-                  <span class="tooltip">{{hero.strength}}</span>
-                </td>
-              </tr>
-              <tr>
-                <th class="header-label" scope="row"> Speed </th>
-                <td style="--size:{{getSize(hero.speed)}};">
-                  <span class="tooltip">{{hero.speed}}</span>
-                </td>
-              </tr>
-              <tr>
-                <th class="header-label" scope="row"> Combat </th>
-                <td style="--size:{{getSize(hero.combat)}};">
-                  <span class="tooltip">{{hero.combat}}</span>
-                </td>
-              </tr>
-              <tr>
-                <th class="header-label" scope="row"> Durable </th>
-                <td style="--size:{{getSize(hero.durability)}};">
-                  <span class="tooltip">{{hero.durability}}</span>
-                </td>
-              </tr>
-            </tbody>
-          </table> -->
-          <!-- <div class="btn-container">
-            <button (click)="edit(hero.id)" class="button-54 btn edit">Edit</button>
-            <button class="button-54 btn delete" title="delete hero" (click)="onDelete(hero)">Delete</button>
-          </div> -->
+            <div><strong>Gender: </strong> {{ hero.gender }}</div>
+            <div><strong>Species:</strong> {{ hero.species }}</div>
+            <div><strong>World:</strong> {{ hero.world }}</div>
+          </div>
+        </div>
+        <div>
+          <button type="button" (click)="goBack()">Go Back</button>
+          <button type="button" (click)="save()">Save</button>
+        </div>
+        <div>
+          <button (click)="edit(hero.id)" class="button-54 btn edit">
+            Edit
+          </button>
+          <button
+            class="button-54 btn delete"
+            title="delete hero"
+            (click)="onDelete(hero)"
+          >
+            Delete
+          </button>
         </div>
       </div>
-
-
-
-
-      <!-- <div>
-        <label for="hero-name">Hero name: </label>
-        <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
-      </div> -->
-      <div>
-        <button type="button" (click)="goBack()">Go Back</button>
-        <button type="button" (click)="save()">Save</button>
-      </div>
-      <div>
-        <button (click)="edit(hero.id)" class="button-54 btn edit">Edit</button>
-        <button class="button-54 btn delete" title="delete hero" (click)="onDelete(hero)">Delete</button>
-      </div>
     </div>
-
+  </div>
+</div>

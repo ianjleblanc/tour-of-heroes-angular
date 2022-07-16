@@ -60,7 +60,6 @@
 }
 
 .card-img-top {
-  /* background-color: crimson; */
   max-height: 325px;
 
 }
@@ -119,10 +118,6 @@ th {
   align-items: flex-start !important;
   padding-left: 8px !important;
 }
-
-/* .edit {
-  background-color: rgb(60, 179, 113);
-} */
 
 .delete {
   background-color: rgba(255, 0, 0, 0.6);

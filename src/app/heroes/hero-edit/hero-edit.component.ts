@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { map, Subscription, switchMap, tap } from 'rxjs';
-// import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { Hero } from 'src/app/hero';
 import { HeroService } from 'src/app/hero.service';
@@ -22,7 +21,6 @@ export class HeroEditComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = [];
 
 
-  // What should this equal? and be a type of?
   heroForm: FormGroup = new FormGroup({});
 
   heroId: number = 0;

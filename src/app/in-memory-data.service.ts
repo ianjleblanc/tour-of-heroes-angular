@@ -3,12 +3,13 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Hero } from './hero';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 11,
+      {
+        id: 11,
         name: 'Crash Nebula',
         gender: 'Male',
         species: 'Humanish',
@@ -19,9 +20,10 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 90,
         speed: 60,
         combat: 70,
-        durability: 60
+        durability: 60,
       },
-      { id: 13,
+      {
+        id: 13,
         name: 'Crimson Chin',
         gender: 'Male',
         species: 'Humanish',
@@ -32,9 +34,10 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 100,
         speed: 80,
         combat: 70,
-        durability: 80
+        durability: 80,
       },
-      { id: 12,
+      {
+        id: 12,
         name: 'Ultor',
         gender: 'Male',
         species: 'Humanish',
@@ -45,9 +48,10 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 80,
         speed: 50,
         combat: 70,
-        durability: 80
+        durability: 80,
       },
-      { id: 14,
+      {
+        id: 14,
         name: 'Ignis',
         gender: 'Male',
         species: 'Jinn',
@@ -58,9 +62,10 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 70,
         speed: 100,
         combat: 90,
-        durability: 60
+        durability: 60,
       },
-      { id: 15,
+      {
+        id: 15,
         name: 'Fluxtrol',
         gender: 'Male',
         species: 'Humanish',
@@ -71,9 +76,10 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 60,
         speed: 50,
         combat: 40,
-        durability: 70
+        durability: 70,
       },
-      { id: 16,
+      {
+        id: 16,
         name: 'Golden Locks',
         gender: 'Female',
         species: 'Meta Human',
@@ -84,9 +90,10 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 40,
         speed: 50,
         combat: 20,
-        durability: 60
+        durability: 60,
       },
-      { id: 17,
+      {
+        id: 17,
         name: 'Bronze Kneecap',
         gender: 'Male',
         species: 'Dork',
@@ -97,9 +104,10 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 50,
         speed: 40,
         combat: 50,
-        durability: 60
+        durability: 60,
       },
-      { id: 18,
+      {
+        id: 18,
         name: 'Platinum Princess',
         gender: 'Female',
         species: 'Meta Human',
@@ -110,9 +118,10 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 60,
         speed: 70,
         combat: 60,
-        durability: 80
+        durability: 80,
       },
-      { id: 19,
+      {
+        id: 19,
         name: 'Van Strangle',
         gender: 'Male',
         species: 'Fairy',
@@ -123,9 +132,10 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 100,
         speed: 80,
         combat: 100,
-        durability: 90
+        durability: 90,
       },
-      { id: 20,
+      {
+        id: 20,
         name: 'Cat Man',
         gender: 'Male',
         species: 'Lyran',
@@ -136,9 +146,10 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 40,
         speed: 70,
         combat: 60,
-        durability: 70
+        durability: 70,
       },
-      { id: 21,
+      {
+        id: 21,
         name: 'Nega Chin',
         gender: 'Male',
         species: 'Humanish',
@@ -149,9 +160,10 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 90,
         speed: 80,
         combat: 90,
-        durability: 80
+        durability: 80,
       },
-      { id: 22,
+      {
+        id: 22,
         name: 'King Crimson',
         gender: 'Male',
         species: 'Humanish',
@@ -162,14 +174,15 @@ export class InMemoryDataService implements InMemoryDbService {
         strength: 100,
         speed: 90,
         combat: 100,
-        durability: 90
+        durability: 90,
       },
     ];
-    return {heroes};
+    return { heroes };
   }
 
   genId(heroes: Hero[]): number {
-    return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;
+    return heroes.length > 0
+      ? Math.max(...heroes.map((hero) => hero.id)) + 1
+      : 11;
   }
-
 }

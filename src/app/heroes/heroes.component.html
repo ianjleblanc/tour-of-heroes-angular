@@ -13,24 +13,14 @@
             <div><strong>Gender: </strong> {{hero.gender}}</div>
             <div><strong>Species:</strong> {{hero.species}}</div>
             <div><strong>World:</strong> {{hero.world}}</div>
-            <!-- ngClass => add class that has check icon for true and x icon for false -->
-            <!-- hero.flight === true ? "fa-solid fa-circle-check" : "fa-solid fa-(close or x)" -->
             <div><strong>Flight: </strong> <i class="fa-solid"
                 [ngClass]="{'fa-circle-check green': hero.flight, 'fa-circle-xmark red': !hero.flight}"></i></div>
 
           </div>
           <table id="bar-example-13" class="charts-css bar show-labels show-primary-axis show-10-secondary-axes">
-            <!-- <caption> Bar Example #13 </caption>
-            <thead>
-              <tr>
-                <th scope="col"> Year </th>
-                <th scope="col"> Progress </th>
-              </tr>
-            </thead> -->
             <tbody>
               <tr>
                 <th class="header-label" scope="row"> Intellect </th>
-                <!-- Make --size:0.2 = 20 etc. ?? -->
                 <td  style="--size:{{getSize(hero.intelligence)}};">
                   <span class="tooltip">{{hero.intelligence}}</span>
                 </td>
@@ -69,6 +59,4 @@
       </div>
     </div>
   </div>
-  <!-- </div> -->
-  <!-- </div> -->
 </div>
